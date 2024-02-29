@@ -1,0 +1,16 @@
+﻿.mylabel
+{
+	font-family: Tahoma;
+	font-size: 12px;
+}
+.mytextbox
+{
+	font-family: Tahoma;
+	font-size: 12px;
+}
+.dynamicBackground {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

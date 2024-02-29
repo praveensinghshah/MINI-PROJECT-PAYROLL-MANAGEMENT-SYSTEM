@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="EmployeeMasterPage.master.cs" Inherits="EmployeeMasterPage" %>
+<%@ Register Src="head.ascx" TagPrefix="uc1" TagName="MyLogo" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body  vlink="blue">
+    <form id="form1" runat="server">
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <uc1:MyLogo ID="MyLogo1" runat="server" />
+                </td>
+            </tr>
+
+            <tr>
+            <td>
+          <div id="menu">
+		<ul class="menu">
+			<li><a href="employeewelcome.aspx" class="parent"><span>   Home   </span></a></li>	
+			<li><a href="employeemessages.aspx"><span>   Messages   </span></a></li>
+			<li><a href="employeepayslips.aspx"><span>   Pay Slip   </span></a></li>
+            <li><a href="logout.aspx"><span>   Log Out   </span></a></li>
+		</ul>
+	</div>
+            </td>
+  </tr>
+
+            <tr>
+                <td>
+                    <asp:Label ID="lblLoggedinAs" runat="server" Style="position:absolute;top:45%; left:45%;" Font-Bold="True" 
+        ForeColor="Green" Font-Names="Tahoma" Font-Size="12px"></asp:Label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <center>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> 
+        </asp:ContentPlaceHolder>
+                        </center>
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div>
+    </form>
+</body>
+</html>
